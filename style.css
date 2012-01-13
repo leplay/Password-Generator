@@ -1,0 +1,49 @@
+﻿/* CSS RESET*/
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}a:focus{outline:none;}.clear{height:0;font-size:0;line-height:0;clear:both;}
+
+body{ 
+    background: #fff;
+    color: #222;
+    font-size:14px;
+    font-family: Arial,"Microsoft YaHei",宋体;
+    }
+
+
+h1 {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 100px;
+}
+
+#generate-result {
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    margin: 20px auto;
+    padding: 0 6px;
+    border: 1px solid #ccc;
+    font-family: Arial;
+}
+
+#generate-button {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 auto;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+#generate-button:active {
+	background: #000;
+}
+
+#options {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
