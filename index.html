@@ -1,1 +1,84 @@
-﻿<!DOCTYPE html><html><head>    <title>Password Generator</title>    <meta charset="utf-8" />    <meta name="Description" content="Password Generator" />    <meta name="author" content="leplay" />    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>    <link rel="stylesheet" href="style.css" type="text/css" />        <script type="text/javascript">        $(function() {            function Check(){                num = $('#select-num').val();                specialChar = $('#special-char').attr('checked');            }                        function randomChar(){            Check();            if(specialChar == "checked") {                            var   x="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+=-`;',./:<>?[]\{}|";            }            else {                var   x="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";            }            tmp="";            for(var   i=0;i<num;i++)   {            tmp   +=   x.charAt(Math.ceil(Math.random()*100000000)%x.length);            }            return tmp;            }            $('#generate-button').click(function() {                randomChar();                $('#generate-result').text(tmp).select();            });    $('#generate-button').attr('onselectstart',"return false").css('-moz-user-select','none');            });                </script></head><body><h1>Password Generator</h1><div id="generate-result"></div><form action="#" id="options"><select id="select-num"><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="selected">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option></select><input type="checkbox" id="special-char"name="special-char" value="true"><label>include symbols</label></form><div id="generate-button">Generate</div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Generator</title>
+    <meta charset="utf-8" />
+    <meta name="Description" content="Password Generator" />
+    <meta name="author" content="leplay" />
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript">
+    $(function() {
+        function Check() {
+            num = $('#select-num').val();
+            specialChar = $('#special-char').attr('checked');
+        }
+
+        function randomChar() {
+            Check();
+            if (specialChar == "checked") {
+                var x = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+=-`;',./:<>?[]\{}|";
+            } else {
+                var x = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            }
+            tmp = "";
+            for (var i = 0; i < num; i++) {
+                tmp += x.charAt(Math.ceil(Math.random() * 100000000) % x.length);
+            }
+            return tmp;
+
+        }
+
+        $('#generate-button').click(function() {
+            randomChar();
+            $('#generate-result').text(tmp).select();
+        });
+        $('#generate-button').attr('onselectstart', "return false").css('-moz-user-select', 'none');
+        randomChar();
+    });
+    </script>
+</head>
+
+<body>
+    <h1>Password Generator</h1>
+    <div id="generate-result"></div>
+    <form action="#" id="options">
+        <select id="select-num">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16" selected="selected">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+        </select>
+        <input type="checkbox" id="special-char" name="special-char" value="true">
+        <label>include symbols</label>
+    </form>
+    <div id="generate-button">
+        Generate
+    </div>
+</body>
+
+</html>
