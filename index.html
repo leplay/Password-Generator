@@ -35,7 +35,7 @@
             $('#generate-result').text(tmp).select();
         });
         $('#generate-button').attr('onselectstart', "return false").css('-moz-user-select', 'none');
-        randomChar();
+        $('#generate-result').text(randomChar()).select();
     });
     </script>
 </head>
