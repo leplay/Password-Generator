@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script type="text/javascript">
     $(function() {
+        var num = 16;
+        var specialChar = "";
+
         function Check() {
             num = $('#select-num').val();
             specialChar = $('#special-char').attr('checked');
@@ -74,11 +77,10 @@
             <option value="32">32</option>
         </select>
         <input type="checkbox" id="special-char" name="special-char" value="true">
-        <label>include symbols</label>
+        <label for="special-char">include symbols</label>
     </form>
     <div id="generate-button">
         Generate
     </div>
 </body>
-
 </html>
